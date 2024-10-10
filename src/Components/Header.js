@@ -4,8 +4,8 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-transparent fixed pt-14 px-4 top-0 left-0 w-full z-50">
-      <div className="max-w-7xl mx-auto p-5">
+    <nav className="bg-transparent fixed pt-12 px-4 sm:px-10 sm:pt-8 xl:pt-16 top-0 left-0 w-full z-50">
+      <div className="lg:mx-6 xl:mx-10 2xl:mx-14 p-5">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <a
@@ -25,13 +25,13 @@ export default function Header() {
               </svg>
             </a>
           </div>
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+          <div className="hidden md:block bg-[#2B2631] py-2 px-5 lg:px-8 opacity-[80%] rounded-tl-xl rounded-br-xl text-white capitalize exp-reg">
+            <div className="flex items-baseline gap-x-4 lg:gap-x-10">
               <a
                 href="#"
                 className="px-3 py-2 rounded-md text-sm font-medium hover:bg-primary-foreground hover:text-primary"
               >
-                Home
+                Work
               </a>
               <a
                 href="#"
@@ -43,7 +43,7 @@ export default function Header() {
                 href="#"
                 className="px-3 py-2 rounded-md text-sm font-medium hover:bg-primary-foreground hover:text-primary"
               >
-                Services
+                Career
               </a>
               <a
                 href="#"

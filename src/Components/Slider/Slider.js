@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
-import Slider1 from "./Slider1.png";
-import Slider2 from "./Slider2.png";
-import Slider3 from "./Slider3.png";
-import Slider4 from "./Slider4.png";
-import Slider5 from "./Slider5.png";
+import Slider1 from "./SliderImages/Slider1.png";
+import Slider2 from "./SliderImages/Slider2.png";
+import Slider3 from "./SliderImages/Slider3.png";
+import Slider4 from "./SliderImages/Slider4.png";
+import Slider5 from "./SliderImages/Slider5.png";
+import Desk1 from "./SliderImages/Desk1.png";
+import Desk2 from "./SliderImages/Desk2.png";
+import Desk3 from "./SliderImages/Desk3.png";
+import Desk4 from "./SliderImages/Desk4.png";
+import Desk5 from "./SliderImages/Desk5.png";
 
 const Slider = () => {
 
@@ -13,6 +18,13 @@ const Slider = () => {
     { image: Slider3, title: "NIYO" },
     { image: Slider4, title: "PLUCKK" },
     { image: Slider5, title: "BAGGIT" }
+  ];
+  const Deskslides = [
+    { image: Desk1, title: "AQUATIEN" },
+    { image: Desk2, title: "FLOH" },
+    { image: Desk3, title: "NIYO" },
+    { image: Desk4, title: "PLUCKK" },
+    { image: Desk5, title: "BAGGIT" }
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -26,14 +38,15 @@ const Slider = () => {
   };
 
   return (
-    <div className='w-[90%] mx-auto mb-12'>
+    <div className='w-[85%] mx-auto mb-12'>
      
-      <img src={slides[currentSlide].image} alt={`Slide ${currentSlide + 1}`} className='w-full' />
+      <img src={slides[currentSlide].image} alt={`Slide ${currentSlide + 1}`} className='w-full block sm:hidden' />
+      <img src={Deskslides[currentSlide].image} alt={`Slide ${currentSlide + 1}`} className='hidden sm:block mx-auto' />
       
       
-      <div className='flex justify-between items-center mt-6 px-2'>
+      <div className='flex justify-between items-center mt-6 px-2 xl:mx-[7%] 2xl:mx-[15%]'>
         
-        <h1 className='exp-bold text-[6vw] tracking-wide text-white'>
+        <h1 className='exp-bold text-[6vw] md:text-[5vw] xl:text-[3vw] tracking-wide text-white'>
           {slides[currentSlide].title}
         </h1>
         

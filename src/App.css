@@ -1,8 +1,18 @@
 .banner{
-    background: url(../public/assets/Hero.png);
+    background: url(../public/assets/HeroDesktop.png);
     background-size: cover;
     background-position: center;
     width: 90%;
-    margin: 15% auto;
-    height: 90vh;
+    margin: 4% auto;
 }
+
+ @media screen and (max-width: 600px) {
+    .banner{
+        background: url(../public/assets/Hero.png);
+        background-size: cover;
+        background-position: center;
+        width: 90%;
+        margin: 15% auto;
+        height: 80vh;
+    }
+ }
