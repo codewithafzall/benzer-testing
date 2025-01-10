@@ -14,7 +14,7 @@ const useShopify = () => {
     try {
       const query = `
         {
-          products(first: 10) {
+          products(first: 20) {
             edges {
               node {
                 id
@@ -35,6 +35,11 @@ const useShopify = () => {
                       priceV2 {
                         amount
                         currencyCode
+                      }
+                      availableForSale
+                      selectedOptions {
+                        name
+                        value
                       }
                     }
                   }
@@ -57,23 +62,28 @@ const useShopify = () => {
                       handle
                       description
                       images(first: 1) {
-                  edges {
-                    node {
-                      src
-                    }
-                  }
-                }
-                  variants(first: 10) {
-                  edges {
-                    node {
-                      id
-                      priceV2 {
-                        amount
-                        currencyCode
+                        edges {
+                          node {
+                            src
+                          }
+                        }
                       }
-                    }
-                  }
-                }
+                      variants(first: 10) {
+                        edges {
+                          node {
+                            id
+                            priceV2 {
+                              amount
+                              currencyCode
+                            }
+                            availableForSale
+                            selectedOptions {
+                              name
+                              value
+                            }
+                          }
+                        }
+                      }
                     }
                   }
                 }

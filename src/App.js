@@ -6,6 +6,7 @@ import Header from './Components/Header';
 import Home from './Pages/Home';
 import CollectionPage from './Pages/CollectionPage';
 import ProductPage from './Pages/ProductPage';
+import Cart from './Pages/Cart';
 
 const App = () => {  
   
@@ -19,9 +20,8 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/collections/:handle" element={<CollectionPage />} />
-            <Route path="/product/:handle" element={<ProductPage />} />
-            {/* Fallback route for 404 Not Found */}
-            <Route path="*" element={<NotFound />} />
+            <Route path="/products/:handle" element={<ProductPage />} />
+            <Route path="/cart" element={<Cart/>}/>
           </Routes>
         </div>
       </Router>
